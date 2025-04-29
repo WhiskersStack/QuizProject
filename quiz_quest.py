@@ -1,5 +1,5 @@
 import random
-
+    
 questions = {
     "science": [
         {"question": "What is the chemical symbol for water?", "answer": "H2O"},
@@ -82,9 +82,12 @@ def ask_question(player):
             print("\nWrong!!!")
             print(f"The right answer is : {questions[category][q]["answer"]}")
 
+winner = {}
+
 
 def show_score(i, name):
     print(f"\n The scores are - {players[i]} : {scores[players[i]]}")
+    
 
 for round in range(1,rounds + 1):
     i = 0
@@ -94,8 +97,26 @@ for round in range(1,rounds + 1):
         #print(f"\n The scores are - {players[i]} : {scores[players[i]]}")
         i = i + 1
 
+def declare_winner():
+    highest_score = 0
+    for player in scores:
+        #print(f"message: {scores[player]}")
+
+        if scores[player] >= highest_score:
+            highest_score = scores[player]
+            
+    print("\n~~~~~~~~~~~~~~~~~\n")        
+    print(f"\n\nThe highest score is : {highest_score}")  
+
+    print("The winners are : ")
+
+    for player in scores:
+        if highest_score == scores[player]:
+            print(f"{player}" )        
+
+declare_winner()
 
 
+print(f"\n\n\n ~~~~~~~~~~~~~~~~ Game over ! ~~~~~~~~~~~~~~~~")
 
-
-print(f"\n\n\n ~~~~~~~~~~~~~~~~ {scores} ~~~~~~~~~~~~~")
+i

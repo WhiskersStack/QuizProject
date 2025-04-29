@@ -116,7 +116,7 @@ def main() :
     declare_winner()
 
 
-    print(f"\n\n\n ~~~~~~~~~~~~~~~~ Game over ! ~~~~~~~~~~~~~~~~")
+    print(f"\n\n\n ~~~~~~~~~~~~~~~ Game over ! ~~~~~~~~~~~~~~~~")
 
 
 
